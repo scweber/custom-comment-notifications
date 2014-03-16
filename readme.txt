@@ -1,7 +1,7 @@
 === Custom Comment Notifications ===
 Contributors: scweber
 Tags: comment, notifications, author, moderator, e-mail
-Requires at least: 3.4.2
+Requires at least: 3.0
 Tested up to: 3.8.1
 Stable tag: 1.0.0
 License: GPLv2 or later
@@ -31,4 +31,4 @@ for you moderators.
 
 == Changelog ==
 = 1.0 =
-This is the first release.
+* This is the first release.

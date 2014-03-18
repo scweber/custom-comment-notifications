@@ -524,11 +524,11 @@ if(!function_exists('wp_notify_postauthor')) :
         // Get the Comment Variables
         $C_AUTHOR = $comment->comment_author;
         if($protect_comment_author == 1) {
-            $C_AUTHOR_IP = 'xxx.xxx.xxx.xxx';
-            $C_AUTHOR_DOMAIN = 'xxxxx://xxxxxxxxxxx.xxx';
-            $C_AUTHOR_URL = 'xxxxx://xxxxxxxxxxx.xxx';
-            $C_AUTHOR_EMAIL = 'xxxxxxxxxx@xxxxxx.xxx';
-            $C_AUTHOR_ARIN_LOOKUP = "Comment Author is protected";
+            $C_AUTHOR_IP = "Comment Author details have been protected by your administrator";
+            $C_AUTHOR_DOMAIN = "Comment Author details have been protected by your administrator";
+            $C_AUTHOR_URL = "Comment Author details have been protected by your administrator";
+            $C_AUTHOR_EMAIL = "Comment Author details have been protected by your administrator";
+            $C_AUTHOR_ARIN_LOOKUP = "Comment Author details have been protected by your administrator";
         } else {
             $C_AUTHOR_IP = $comment->comment_author_IP;
             $C_AUTHOR_DOMAIN = @gethostbyaddr($comment->comment_author_IP);

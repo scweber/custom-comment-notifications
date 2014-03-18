@@ -43,12 +43,21 @@ for you moderators.
   * Site Link
   * Blog Name
 
+= Planned Updates =
+* I plan on adding the following features shortly
+  * Ability to specify additional recipients of the e-mails on a per template basis
+    * This will allow for only the administrators to receive the moderation e-mails.  Or if you have multiple moderators, it will allow each moderator to receive an e-mail
+    * The additional users will be required to have an account on your site
+
 == Frequently Asked Questions ==
 **I have Custom Comment Notifications installed, now what?**  
 Activate the plugin.  It doesn't matter if you choose to network activate or activate on a single site.  Note that in a Network activation, it will activate the plugin on each site, but with individual templates/settings for each site.
 
 == Screenshots ==
 1. Settings Page
+2. Available Variables
+3. Example HTML E-mail
+4. Example Plain Text E-mail
 
 == Installation ==
 = Automatic: =

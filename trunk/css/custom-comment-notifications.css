@@ -9,7 +9,6 @@
 #ccn-general-settings-container { padding: 25px 0; }
 #ccn-editor-container { padding: 25px 0 0 0; }
 #ccn-editor-container th { font-size: 120%; text-align: left; padding-top: 5px; }
-#ccn-editor-container #ccn-editor-subject, #ccn-editor-container #ccn-editor-content { text-indent: -15px; }
 #ccn-template-warning { padding-left: 15px; vertical-align: middle; }
 #ccn-save-container { padding: 25px 0; }
 

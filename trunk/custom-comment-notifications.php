@@ -256,69 +256,6 @@ function ccn_settings_menu() {
 <?php
 } //End ccn_settings_menu()
 
-// AJAX Functions
-add_action('wp_ajax_ccn_update_editor_content', 'ccn_update_editor_content_callback');
-function ccn_update_editor_content_callback() {
-    switch($_POST['template']) {
-        case 'author_comment':
-            $content = get_option('ccn_author_comment', CCN_DEFAULT_AUTHOR_COMMENT);
-            break;
-        case 'author_trackback':
-            $content = get_option('ccn_author_trackback', CCN_DEFAULT_AUTHOR_TRACKBACK);
-            break;
-        case 'author_pingback':
-            $content = get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK);
-            break;
-        case 'moderator_comment':
-            $content = get_option('ccn_moderator_comment', CCN_DEFAULT_MODERATOR_COMMENT);
-            break;
-        case 'moderator_trackback':
-            $content = get_option('ccn_moderator_trackback', CCN_DEFAULT_MODERATOR_TRACKBACK);
-            break;
-        case 'moderator_pingback':
-            $content = get_option('ccn_moderator_pingback', CCN_DEFAULT_MODERATOR_PINGBACK);
-            break;
-        default:
-            $content = '';
-            break;
-    }
-    
-    echo trim(wp_specialchars_decode(esc_textarea($content), ENT_QUOTES));
-    
-    die();
-}
-
-add_action('wp_ajax_ccn_update_editor_subject', 'ccn_update_editor_subject_callback');
-function ccn_update_editor_subject_callback() {
-     switch($_POST['template']) {
-        case 'author_comment':
-            $subject = get_option('ccn_author_comment_subject', CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT);
-            break;
-        case 'author_trackback':
-            $subject = get_option('ccn_author_trackback_subject', CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT);
-            break;
-        case 'author_pingback':
-            $subject = get_option('ccn_author_pingback_subject', CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT);
-            break;
-        case 'moderator_comment':
-            $subject = get_option('ccn_moderator_comment_subject', CCN_DEFAULT_MODERATOR_COMMENT_SUBJECT);
-            break;
-        case 'moderator_trackback':
-            $subject = get_option('ccn_moderator_trackback_subject', CCN_DEFAULT_MODERATOR_TRACKBACK_SUBJECT);
-            break;
-        case 'moderator_pingback':
-            $subject = get_option('ccn_moderator_pingback_subject', CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT);
-            break;
-        default:
-            $subject = '';
-            break;
-    }
-    
-    echo trim(wp_specialchars_decode(esc_textarea($subject), ENT_QUOTES));
-    
-    die();
-}
-
 // Set up Plugin Menu
 function ccn_plugin_menu() {//Set up the plugin menu
         add_submenu_page('options-general.php',__('Custom Comment Notifications Options','custom-comment-notifications'),__('Custom Comment Notifications','custom-comment-notifications'),'edit_plugins',basename(__FILE__),'ccn_settings_menu');
@@ -402,6 +339,69 @@ register_uninstall_hook(__FILE__, 'ccn_uninstall');
 add_action('admin_menu', 'ccn_plugin_menu');
 add_action('admin_footer', 'ccn_javascript');
 
+// AJAX Functions
+add_action('wp_ajax_ccn_update_editor_content', 'ccn_update_editor_content_callback');
+function ccn_update_editor_content_callback() {
+    switch($_POST['template']) {
+        case 'author_comment':
+            $content = get_option('ccn_author_comment', CCN_DEFAULT_AUTHOR_COMMENT);
+            break;
+        case 'author_trackback':
+            $content = get_option('ccn_author_trackback', CCN_DEFAULT_AUTHOR_TRACKBACK);
+            break;
+        case 'author_pingback':
+            $content = get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK);
+            break;
+        case 'moderator_comment':
+            $content = get_option('ccn_moderator_comment', CCN_DEFAULT_MODERATOR_COMMENT);
+            break;
+        case 'moderator_trackback':
+            $content = get_option('ccn_moderator_trackback', CCN_DEFAULT_MODERATOR_TRACKBACK);
+            break;
+        case 'moderator_pingback':
+            $content = get_option('ccn_moderator_pingback', CCN_DEFAULT_MODERATOR_PINGBACK);
+            break;
+        default:
+            $content = '';
+            break;
+    }
+    
+    echo trim(wp_specialchars_decode(esc_textarea($content), ENT_QUOTES));
+    
+    die();
+}
+
+add_action('wp_ajax_ccn_update_editor_subject', 'ccn_update_editor_subject_callback');
+function ccn_update_editor_subject_callback() {
+     switch($_POST['template']) {
+        case 'author_comment':
+            $subject = get_option('ccn_author_comment_subject', CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT);
+            break;
+        case 'author_trackback':
+            $subject = get_option('ccn_author_trackback_subject', CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT);
+            break;
+        case 'author_pingback':
+            $subject = get_option('ccn_author_pingback_subject', CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT);
+            break;
+        case 'moderator_comment':
+            $subject = get_option('ccn_moderator_comment_subject', CCN_DEFAULT_MODERATOR_COMMENT_SUBJECT);
+            break;
+        case 'moderator_trackback':
+            $subject = get_option('ccn_moderator_trackback_subject', CCN_DEFAULT_MODERATOR_TRACKBACK_SUBJECT);
+            break;
+        case 'moderator_pingback':
+            $subject = get_option('ccn_moderator_pingback_subject', CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT);
+            break;
+        default:
+            $subject = '';
+            break;
+    }
+    
+    echo trim(wp_specialchars_decode(esc_textarea($subject), ENT_QUOTES));
+    
+    die();
+}
+
 function ccn_javascript() { ?>
     <script type='text/javascript'>
         jQuery(document).ready(function($) {
@@ -411,10 +411,10 @@ function ccn_javascript() { ?>
                 var data_subject = { action: 'ccn_update_editor_subject', template: template };
 
                 $.post(ajaxurl, data_content, function(response) {
-                   $("#ccn-editor-content").val(response);
+                    $("#ccn-editor-content").val(response.trim());
                 });
                 $.post(ajaxurl, data_subject, function(response) {
-                   $("#ccn-editor-subject").val(response); 
+                    $("#ccn-editor-subject").val(response.trim()); 
                 });
                 
                 $("#ccn-editor-content").attr("name", "ccn_"+template);

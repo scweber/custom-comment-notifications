@@ -15,19 +15,52 @@ what information is left out.  You can make the e-mails as detailed or as minima
 standard e-mail template that will be dynamically generated and sent to your authors and moderators.  You can specify a separate template for your authors and another 
 for you moderators.
 
+= Available Variables =
+* **Post Variables**
+  * Post ID
+  * Post Title
+  * Post Link
+  * Post Link to Specific Comment
+  * Post Link to Comments Section
+
+* **Comment Variables**
+  * Comment Author Name
+  * Comment Author Email
+  * Comment Author IP
+  * Comment Author Domain
+  * Comment Author URL
+  * Comment Author ARIN Lookup
+  * Comment Content
+  * Comments Awaiting Moderation (Moderator Templates Only)
+
+* **Moderation Variables**
+  * Delete/Trash Comment (Depends on EMPTY_TRASH_DAYS variable)
+  * Approve Comment (Moderator Templates Only)
+  * Spam Comment
+  * Moderation Panel Link (Moderator Templates Only)
+
+* **Site Variables**
+  * Site Link
+  * Blog Name
+
+== Frequently Asked Questions ==
+**I have Custom Comment Notifications installed, now what?**  
+Activate the plugin.  It doesn't matter if you choose to network activate or activate on a single site.  Note that in a Network activation, it will activate the plugin on each site, but with individual templates/settings for each site.
+
 == Screenshots ==
 1. Settings Page
 
 == Installation ==
-= Manual/FTP: =
-1. Upload `custom-comment-notifications` directory to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Set up and customize the plugin through the 'Settings' Menu
-
 = Automatic: =
 1. Search for 'custom comment notifications' through the New Plugin Menu
 2. Install the plugin
 3. Activate either on a Network Level or on a Single Site Level
+4. Note that a netowrk activation will activate on the sub-sites with individual template/settings options
+
+= Manual/FTP: =
+1. Upload `custom-comment-notifications` directory to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Set up and customize the plugin through the 'Settings' Menu
 
 == Changelog ==
 = 1.0 =

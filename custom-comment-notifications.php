@@ -29,21 +29,21 @@ Author URI: https://github.com/scweber
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 // Default Subjects
-define('CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT', '[BLOG_NAME] Comment: "P_TITLE"');
-define('CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT', '[BLOG_NAME] Trackback: "P_TITLE"');
-define('CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT', '[BLOG_NAME] Pingback: "P_TITLE"');
+define('CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT', '[BLOG_NAME] Comment: P_TITLE');
+define('CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT', '[BLOG_NAME] Trackback: P_TITLE');
+define('CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT', '[BLOG_NAME] Pingback: P_TITLE');
 define('CCN_DEFAULT_MODERATOR_COMMENT_SUBJECT', '[BLOG_NAME] Comment: Awaiting Your Approval');
 define('CCN_DEFAULT_MODERATOR_TRACKBACK_SUBJECT', '[BLOG_NAME] Trackback: Awaiting Your Approval');
 define('CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT', '[BLOG_NAME] Pingback: Awaiting Your Approval');
 
 // Default Content
 define('CCN_DEFAULT_AUTHOR_COMMENT', 
-    'New comment on your post \"P_LINK\"
+    'New comment on your post P_LINK
          
     Author: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)
     E-mail: C_AUTHOR_EMAIL
-    URL: C_AUTHOR_URL\'
-    Whois: C_AUTHOR_ARIN_LOOKUP\'
+    URL: C_AUTHOR_URL
+    Whois: C_AUTHOR_ARIN_LOOKUP
 
     Comment:    
     C_CONTENT
@@ -52,56 +52,61 @@ define('CCN_DEFAULT_AUTHOR_COMMENT',
 
     DELETE_TRASH_COMMENT_LINK | SPAM_COMMENT_LINK');
 define('CCN_DEFAULT_AUTHOR_TRACKBACK', 
-        'New trackback on your post "P_LINK"\r\n'
-        . 'Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)\r\n'
-        . 'URL: C_AUTHOR_URL\r\n'
-        . 'Trackback Excerpt:\r\n'
-        . 'C_CONTENT\r\n\r\n'
-        . 'You can see the trackback on this post here:\r\n'
-        . 'P_LINK_COMMENT\r\n\r\n'
-        . 'DELETE_TRASH_COMMENT_LINK\r\n'
-        . 'SPAM_COMMENT_LINK\r\n');
+        'New trackback on your post P_LINK
+            
+        Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)
+        URL: C_AUTHOR_URL
+        
+        Trackback Excerpt:
+        C_CONTENT
+        
+        You can see the trackback on this post here: P_LINK_COMMENT
+        
+        DELETE_TRASH_COMMENT_LINK | SPAM_COMMENT_LINK');
 define('CCN_DEFAULT_AUTHOR_PINGBACK', 
-        'New pingback on your post "P_LINK"\r\n'
-        . 'Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)\r\n'
-        . 'URL: C_AUTHOR_URL\r\n'
-        . 'Pingback Excerpt:\r\n'
-        . 'C_CONTENT\r\n\r\n'
-        . 'You can see the pingback on this post here:\r\n'
-        . 'P_LINK_COMMENT\r\n\r\n'
-        . 'DELETE_TRASH_COMMENT_LINK\r\n'
-        . 'SPAM_COMMENT_LINK\r\n');
+        'New pingback on your post P_LINK
+            
+        Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)
+        URL: C_AUTHOR_URL
+        
+        Pingback Excerpt:
+        C_CONTENT
+        
+        You can see the pingback on this post here: P_LINK_COMMENT
+        
+        DELETE_TRASH_COMMENT_LINK | SPAM_COMMENT_LINK');
 define('CCN_DEFAULT_MODERATOR_COMMENT', 
-        'A new comment on "P_LINK" is waiting for your approval\r\n'
-        . 'Author: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)\r\n'
-        . 'E-mail: C_AUTHOR_EMAIL\r\n'
-        . 'URL: C_AUTHOR_URL\r\n'
-        . 'Whois: C_AUTHOR_ARIN_LOOKUP\r\n'
-        . 'Comment:\r\n'
-        . 'C_CONTENT\r\n\r\n'
-        . 'APPROVE_COMMENT_LINK |'
-        . 'DELETE_TRASH_COMMENT_LINK |'
-        . 'SPAM_COMMENT_LINK\r\n');
+        'A new comment on P_LINK is waiting for your approval
+
+        Author: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)
+        E-mail: C_AUTHOR_EMAIL
+        URL: C_AUTHOR_URL
+        Whois: C_AUTHOR_ARIN_LOOKUP
+
+        Comment:    
+        C_CONTENT
+
+        APPROVE_COMMENT_LINK | DELETE_TRASH_COMMENT_LINK | SPAM_COMMENT_LINK');
 define('CCN_DEFAULT_MODERATOR_TRACKBACK', 
-        'A new trackback on "P_LINK" is waiting for your approval\r\n'
-        . 'Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)\r\n'
-        . 'URL: C_AUTHOR_URL\r\n'
-        . 'Trackback Excerpt:\r\n'
-        . 'C_CONTENT\r\n\r\n'
-        . 'You can see the trackback on this post here:\r\n'
-        . 'P_LINK_COMMENT\r\n\r\n'
-        . 'APPROVE_COMMENT_LINK |'
-        . 'DELETE_TRASH_COMMENT_LINK |'
-        . 'SPAM_COMMENT_LINK\r\n');
+        'A new trackback on P_LINK is waiting for your approval
+            
+        Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)
+        URL: C_AUTHOR_URL
+        
+        Trackback Excerpt:
+        C_CONTENT
+        
+        APPROVE_COMMENT_LINK | DELETE_TRASH_COMMENT_LINK | SPAM_COMMENT_LINK');
 define('CCN_DEFAULT_MODERATOR_PINGBACK', 
-        'A new pingback on "P_LINK" is waiting for your approval\r\n'
-        . 'Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)\r\n'
-        . 'URL: C_AUTHOR_URL\r\n'
-        . 'Pingback Excerpt:\r\n'
-        . 'C_CONTENT\r\n\r\n'
-        . 'APPROVE_COMMENT_LINK |'
-        . 'DELETE_TRASH_COMMENT_LINK |'
-        . 'SPAM_COMMENT_LINK\r\n');
+        'A new pingback on P_LINK is waiting for your approval
+            
+        Website: C_AUTHOR (IP: C_AUTHOR_IP , C_AUTHOR_DOMAIN)
+        URL: C_AUTHOR_URL
+        
+        Pingback Excerpt:
+        C_CONTENT
+        
+        APPROVE_COMMENT_LINK | DELETE_TRASH_COMMENT_LINK | SPAM_COMMENT_LINK');
 
 // Settings Menu
 function ccn_settings_menu() {
@@ -109,32 +114,32 @@ function ccn_settings_menu() {
     wp_enqueue_style('custom-comment-notifications-stylesheet', plugins_url('css/custom-comment-notifications.css', __FILE__));
     wp_enqueue_script('custom-comment-notifications-javascript', plugins_url('js/custom-comment-notifications.js', __FILE__), array('jquery'), '1.0', true);
     
-    // Get the values that were just submitted
+    // Get the values that were just submitted and sanitize the content.
     if(isset($_POST['ccn_save']) && $_POST['ccn_save']) {
         if(isset($_POST['ccn_author_comment_subject']) && isset($_POST['ccn_author_comment'])) {
-            update_option('ccn_author_comment_subject', $_POST['ccn_author_comment_subject']);
-            update_option('ccn_author_comment', $_POST['ccn_author_comment']);
+            update_option('ccn_author_comment_subject', stripslashes(sanitize_text_field($_POST['ccn_author_comment_subject'])));
+            update_option('ccn_author_comment', stripslashes(wp_kses_post($_POST['ccn_author_comment'])));
             update_option('ccn_protect_comment_author', $_POST['ccn_protect_comment_author']);
             $saved_template = 'Author Comment';
         } else if (isset($_POST['ccn_author_trackback_subject']) && isset($_POST['ccn_author_trackback'])) {
-            update_option('ccn_author_trackback_subject', $_POST['ccn_author_trackback_subject']);
-            update_option('ccn_author_trackback', $_POST['ccn_author_trackback']);
+            update_option('ccn_author_trackback_subject', stripslashes(sanitize_text_field($_POST['ccn_author_trackback_subject'])));
+            update_option('ccn_author_trackback', stripslashes(wp_kses_post($_POST['ccn_author_trackback'])));
             $saved_template = 'Author Trackback';
         } else if (isset($_POST['ccn_author_pingback_subject']) && isset($_POST['ccn_author_pingback'])) {
-            update_option('ccn_author_pingback_subject', $_POST['ccn_author_pingback_subject']);
-            update_option('ccn_author_pingback', $_POST['ccn_author_pingback']);
+            update_option('ccn_author_pingback_subject', stripslashes(sanitize_text_field($_POST['ccn_author_pingback_subject'])));
+            update_option('ccn_author_pingback', stripslashes(wp_kses_post($_POST['ccn_author_pingback'])));
             $saved_template = 'Author Pingback';
         } else if (isset($_POST['ccn_moderator_comment_subject']) && isset($_POST['ccn_moderator_comment'])) {
-            update_option('ccn_moderator_comment_subject', $_POST['ccn_moderator_comment_subject']);
-            update_option('ccn_moderator_comment', $_POST['ccn_moderator_comment']);
+            update_option('ccn_moderator_comment_subject', stripslashes(sanitize_text_field($_POST['ccn_moderator_comment_subject'])));
+            update_option('ccn_moderator_comment', stripslashes(wp_kses_post($_POST['ccn_moderator_comment'])));
             $saved_template = 'Moderator Comment';
         } else if (isset($_POST['ccn_moderator_trackback_subject']) && isset($_POST['ccn_moderator_trackback'])) {
-            update_option('ccn_moderator_trackback_subject', $_POST['ccn_moderator_trackback_subject']);
-            update_option('ccn_moderator_trackback', $_POST['ccn_moderator_trackback']);
+            update_option('ccn_moderator_trackback_subject', stripslashes(sanitize_text_field($_POST['ccn_moderator_trackback_subject'])));
+            update_option('ccn_moderator_trackback', stripslashes(wp_kses_post($_POST['ccn_moderator_trackback'])));
             $saved_template = 'Moderator Trackback';
         } else if (isset($_POST['ccn_moderator_pingback_subject']) && isset($_POST['ccn_moderator_pingback'])) {
-            update_option('ccn_moderator_pingback_subject', $_POST['ccn_moderator_pingback_subject']);
-            update_option('ccn_moderator_pingback', $_POST['ccn_moderator_pingback']);
+            update_option('ccn_moderator_pingback_subject', stripslashes(sanitize_text_field($_POST['ccn_moderator_pingback_subject'])));
+            update_option('ccn_moderator_pingback', stripslashes(wp_kses_post($_POST['ccn_moderator_pingback'])));
             $saved_template = 'Moderator Pingback';
         } else {
             ?> <div id="message" class="error">
@@ -181,7 +186,6 @@ function ccn_settings_menu() {
         </div>
         <div id="ccn-template-selector">
             <table id="ccn-template-table">       
-                <tr><td colspan="2"><span>**Switching the selection without saving will result in losing unsaved changes.</span></td></tr>
                 <tr valign="top">
                     <td>
                         <select name="ccn_template" id="ccn-template">
@@ -194,8 +198,8 @@ function ccn_settings_menu() {
                             <option value="moderator_pingback"><?php _e('Moderator Pingback','custom-comment-notifications'); ?></option>
                         </select>
                     </td>
+                    <td id="ccn-template-warning"><span>**Switching the selection without saving will result in losing unsaved changes.</span></td>
                 </tr>
-                <tr><td colspan="2"><span>**Switching the selection without saving will result in losing unsaved changes.</span></td></tr>
             </table>
         </div>
         <div id="ccn-editor-container">
@@ -257,29 +261,29 @@ add_action('wp_ajax_ccn_update_editor_content', 'ccn_update_editor_content_callb
 function ccn_update_editor_content_callback() {
     switch($_POST['template']) {
         case 'author_comment':
-            $html = get_option('ccn_author_comment', CCN_DEFAULT_AUTHOR_COMMENT);
+            $content = get_option('ccn_author_comment', CCN_DEFAULT_AUTHOR_COMMENT);
             break;
         case 'author_trackback':
-            $html = get_option('ccn_author_trackback', CCN_DEFAULT_AUTHOR_TRACKBACK);
+            $content = get_option('ccn_author_trackback', CCN_DEFAULT_AUTHOR_TRACKBACK);
             break;
         case 'author_pingback':
-            $html = get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK);
+            $content = get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK);
             break;
         case 'moderator_comment':
-            $html = get_option('ccn_moderator_comment', CCN_DEFAULT_MODERATOR_COMMENT);
+            $content = get_option('ccn_moderator_comment', CCN_DEFAULT_MODERATOR_COMMENT);
             break;
         case 'moderator_trackback':
-            $html = get_option('ccn_moderator_trackback', CCN_DEFAULT_MODERATOR_TRACKBACK);
+            $content = get_option('ccn_moderator_trackback', CCN_DEFAULT_MODERATOR_TRACKBACK);
             break;
         case 'moderator_pingback':
-            $html = get_option('ccn_moderator_pingback', CCN_DEFAULT_MODERATOR_PINGBACK);
+            $content = get_option('ccn_moderator_pingback', CCN_DEFAULT_MODERATOR_PINGBACK);
             break;
         default:
-            $html = '';
+            $content = '';
             break;
     }
     
-    echo $html;
+    echo trim(wp_specialchars_decode(esc_textarea($content), ENT_QUOTES));
     
     die();
 }
@@ -288,29 +292,29 @@ add_action('wp_ajax_ccn_update_editor_subject', 'ccn_update_editor_subject_callb
 function ccn_update_editor_subject_callback() {
      switch($_POST['template']) {
         case 'author_comment':
-            $html = get_option('ccn_author_comment_subject', CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT);
+            $subject = get_option('ccn_author_comment_subject', CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT);
             break;
         case 'author_trackback':
-            $html = get_option('ccn_author_trackback_subject', CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT);
+            $subject = get_option('ccn_author_trackback_subject', CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT);
             break;
         case 'author_pingback':
-            $html = get_option('ccn_author_pingback_subject', CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT);
+            $subject = get_option('ccn_author_pingback_subject', CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT);
             break;
         case 'moderator_comment':
-            $html = get_option('ccn_moderator_comment_subject', CCN_DEFAULT_MODERATOR_COMMENT_SUBJECT);
+            $subject = get_option('ccn_moderator_comment_subject', CCN_DEFAULT_MODERATOR_COMMENT_SUBJECT);
             break;
         case 'moderator_trackback':
-            $html = get_option('ccn_moderator_trackback_subject', CCN_DEFAULT_MODERATOR_TRACKBACK_SUBJECT);
+            $subject = get_option('ccn_moderator_trackback_subject', CCN_DEFAULT_MODERATOR_TRACKBACK_SUBJECT);
             break;
         case 'moderator_pingback':
-            $html = get_option('ccn_moderator_pingback_subject', CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT);
+            $subject = get_option('ccn_moderator_pingback_subject', CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT);
             break;
         default:
-            $html = '';
+            $subject = '';
             break;
     }
     
-    echo $html;
+    echo trim(wp_specialchars_decode(esc_textarea($subject), ENT_QUOTES));
     
     die();
 }
@@ -438,11 +442,11 @@ if(!function_exists('wp_notify_postauthor')) :
             $author_pingback = nl2br(get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK));
         } else {
             $author_comment_subject = get_option('ccn_author_comment_subject', CCN_DEFAULT_AUTHOR_COMMENT_SUBJECT);
-            $author_comment = get_option('ccn_author_comment', CCN_DEFAULT_AUTHOR_COMMENT);
+            $author_comment = strip_all_tags(get_option('ccn_author_comment', CCN_DEFAULT_AUTHOR_COMMENT));
             $author_trackback_subject = get_option('ccn_author_trackback_subject', CCN_DEFAULT_AUTHOR_TRACKBACK_SUBJECT);
-            $author_trackback = get_option('ccn_author_trackback', CCN_DEFAULT_AUTHOR_TRACKBACK);
+            $author_trackback = strip_all_tags(get_option('ccn_author_trackback', CCN_DEFAULT_AUTHOR_TRACKBACK));
             $author_pingback_subject = get_option('ccn_author_pingback_subject', CCN_DEFAULT_AUTHOR_PINGBACK_SUBJECT);
-            $author_pingback = get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK);
+            $author_pingback = strip_all_tags(get_option('ccn_author_pingback', CCN_DEFAULT_AUTHOR_PINGBACK));
         }
         
         $comment = get_comment($comment_id);
@@ -545,18 +549,18 @@ if(!function_exists('wp_notify_postauthor')) :
 
         // Get the Moderation Variables    
         if($email_format == 'html') {
-            $SPAM_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=spam&c=$comment_id').'">Spam Comment</a>';
+            $SPAM_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=spam&c='.$comment_id).'">Spam It</a>';
             if (EMPTY_TRASH_DAYS) {
-                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=trash&c=$comment_id').'">Trash Comment</a>';
+                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=trash&c='.$comment_id).'">Trash It</a>';
             } else {
-                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=delete&c=$comment_id').'">Delete Comment</a>';
+                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=delete&c='.$comment_id).'">Delete It</a>';
             }
         } else {
-            $SPAM_COMMENT_LINK = 'Spam Comment - '.admin_url('comment.php?action=spam&c=$comment_id');
+            $SPAM_COMMENT_LINK = 'Spam It - '.admin_url('comment.php?action=spam&c='.$comment_id);
             if (EMPTY_TRASH_DAYS) {
-                $DELETE_TRASH_COMMENT_LINK = 'Trash Comment - '.admin_url('comment.php?action=trash&c=$comment_id');
+                $DELETE_TRASH_COMMENT_LINK = 'Trash It - '.admin_url('comment.php?action=trash&c='.$comment_id);
             } else {
-                $DELETE_TRASH_COMMENT_LINK = 'Delete Comment - '.admin_url('comment.php?action=delete&c=$comment_id');
+                $DELETE_TRASH_COMMENT_LINK = 'Delete It - '.admin_url('comment.php?action=delete&c='.$comment_id);
             }
         }    
         
@@ -661,6 +665,13 @@ if(!function_exists('wp_notify_moderator')) :
             $moderator_trackback = nl2br(get_option('ccn_moderator_trackback', CCN_DEFAULT_MODERATOR_TRACKBACK));
             $moderator_pingback_subject = nl2br(get_option('ccn_moderator_pingback_subject', CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT));
             $moderator_pingback = nl2br(get_option('ccn_moderator_pingback', CCN_DEFAULT_MODERATOR_PINGBACK));
+        } else {
+            $moderator_comment_subject = get_option('ccn_moderator_comment_subject', CCN_DEFAULT_MODERATOR_COMMENT_SUBJECT);
+            $moderator_comment = get_option('ccn_moderator_comment', CCN_DEFAULT_MODERATOR_COMMENT);
+            $moderator_trackback_subject = get_option('ccn_moderator_trackback_subject', CCN_DEFAULT_MODERATOR_TRACKBACK_SUBJECT);
+            $moderator_trackback = get_option('ccn_moderator_trackback', CCN_DEFAULT_MODERATOR_TRACKBACK);
+            $moderator_pingback_subject = get_option('ccn_moderator_pingback_subject', CCN_DEFAULT_MODERATOR_PINGBACK_SUBJECT);
+            $moderator_pingback = get_option('ccn_moderator_pingback', CCN_DEFAULT_MODERATOR_PINGBACK);
         }
     
         if(0 == get_option('moderation_notify')) {
@@ -731,26 +742,27 @@ if(!function_exists('wp_notify_moderator')) :
 
         // Get the Moderation Variables    
         if($email_format == 'html') {
-            $SPAM_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=spam&c=$comment_id').'">Spam Comment</a>';
-            $APPROVE_COMMENT = '<a href="'.admin_url('comment.php?action=approve&c=$comment_id').'">Approve Comment</a>';
+            $SPAM_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=spam&c='.$comment_id).'">Spam It</a>';
+            $APPROVE_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=approve&c='.$comment_id).'">Approve It</a>';
             $MODERATION_PANEL = '<a href="'.admin_url('edit-comments.php?comment_status=moderated').'">Moderation Panel</a>';
             if (EMPTY_TRASH_DAYS) {
-                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=trash&c=$comment_id').'>Trash Comment</a>';
+                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=trash&c='.$comment_id).'">Trash It</a>';
             } else {
-                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=delete&c=$comment_id').'>Delete Comment</a>';
+                $DELETE_TRASH_COMMENT_LINK = '<a href="'.admin_url('comment.php?action=delete&c='.$comment_id).'">Delete It</a>';
             }
         } else {
-            $SPAM_COMMENT_LINK = 'Spam Comment - '.admin_url('comment.php?action=spam&c=$comment_id');
-            $APPROVE_COMMENT = 'Approve Comment - '.admin_url('comment.php?action=approve&c=$comment_id');
+            $SPAM_COMMENT_LINK = 'Spam It - '.admin_url('comment.php?action=spam&c='.$comment_id);
+            $APPROVE_COMMENT_LINK = 'Approve It - '.admin_url('comment.php?action=approve&c='.$comment_id);
             $MODERATION_PANEL = 'Moderation Panel - '.admin_url('edit-comments.php?comment_status=moderated');
             if (EMPTY_TRASH_DAYS) {
-                $DELETE_TRASH_COMMENT_LINK = 'Trash Comment - '.admin_url('comment.php?action=trash&c=$comment_id');
+                $DELETE_TRASH_COMMENT_LINK = 'Trash It - '.admin_url('comment.php?action=trash&c='.$comment_id);
             } else {
-                $DELETE_TRASH_COMMENT_LINK = 'Delete Comment - '.admin_url('comment.php?action=delete&c=$comment_id');
+                $DELETE_TRASH_COMMENT_LINK = 'Delete It - '.admin_url('comment.php?action=delete&c='.$comment_id);
             }
         }    
         
         if (!user_can($post->post_author, 'edit_comment', $comment_id)) { // Reset the Moderation Settings if post author can't moderate
+            $APPROVE_COMMENT_LINK = '';
             $DELETE_TRASH_COMMENT_LINK = '';
             $SPAM_COMMENT_LINK = '';
         }        
@@ -806,14 +818,14 @@ if(!function_exists('wp_notify_moderator')) :
         $subject = preg_replace("/\bBLOG_NAME\b/u", $BLOG_NAME, $subject); 
         
         $sender = 'webmaster@'.preg_replace('#^www.#', '', strtolower($_SERVER['SERVER_NAME']));
-        if ( '' == $comment->comment_author ) {
+        if ($comment->comment_author_email != '') {
             $from = "From: \"$blogname\" <$wp_email>";
-            if ( '' != $comment->comment_author_email ) {
+            if ($comment->comment_author_email != '') {
                 $reply_to = "Reply-To: $comment->comment_author_email";
             }
 	} else {
             $from = "From: \"$comment->comment_author\" <$wp_email>";
-            if ( '' != $comment->comment_author_email ) {
+            if ($comment->comment_author_email != '') {
                 $reply_to = "Reply-To: \"$comment->comment_author_email\" <$comment->comment_author_email>"; 
             }
 	}
